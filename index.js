@@ -1,18 +1,29 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    const complement = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === complement) return true;
+    }
+  }
+
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  o(n) - Time Complexity
+  o(n) - Space Complexity
 */
 
 /* 
   Add your pseudocode here
+  init for loop
+  declare const element and assign it a val
+  init a nested for loop
+  write logic for the 'for loops'
 */
 
-/*
-  Add written explanation of your solution here
-*/
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
